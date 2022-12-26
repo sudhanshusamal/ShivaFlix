@@ -21,10 +21,10 @@ ScreenShot :- ![Screenshot (29)](https://user-images.githubusercontent.com/96838
 [![linkedin](https://github.com/shikhar1020jais1/Git-Social/blob/master/Icons/LinkedIn.png (LinkedIn))][3]
 [![github](https://github.com/shikhar1020jais1/Git-Social/blob/master/Icons/Github.png (Github))][4]
 
-[2]: https://www.instagram.com/rahul.json
-[3]: https://www.twitter.com/sudhanshusama1
-[4]: https://www.linkedin.com/in/sudhanshu-samal-257549226
-[5]: https://www.github.com/sudhanshusamal
+[1]: https://www.instagram.com/rahul.json
+[2]: https://www.twitter.com/sudhanshusama1
+[3]: https://www.linkedin.com/in/sudhanshu-samal-257549226
+[4]: https://www.github.com/sudhanshusamal
 
 # Technologies Used
 --> [React](https://reactjs.org/docs/getting-started.html) <br> 
