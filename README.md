@@ -1,9 +1,9 @@
 # ShivaFlix
-Shiva Flix Is a Anime Streaming Website; Live : https://shivaflix.tk 
-Api used in this Web :- https://rapidapi.com/riimuru/api/gogoanime2
+Shiva Flix Is a Anime Streaming Website; Live : https://shivaflix.tk <br>
+Api used in this Web :- https://rapidapi.com/riimuru/api/gogoanime2 <br>
 
 #Demo
-Live :- https://shivaflix.tk
+Live :- https://shivaflix.tk <br>
 ScreenShot :- ![Screenshot (29)](https://user-images.githubusercontent.com/96838974/209569925-efa94297-ab41-4880-a1c0-d2d55978d82e.png)
 ![Screenshot (30)](https://user-images.githubusercontent.com/96838974/209569930-309b82d1-daea-4aae-b4c4-f7a93fd7c9ec.png)
 ![Screenshot (31)](https://user-images.githubusercontent.com/96838974/209569935-7089f322-05a6-416d-b27d-6492e6870230.png)
