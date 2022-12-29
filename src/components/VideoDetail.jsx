@@ -1,42 +1,64 @@
 import { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { Typography, Box, Stack, CardContent, CardMedia } from '@mui/material'
-
 import { Videos } from './'
+import Hls from 'hls.js'
+import Plyr from 'plyr';
+import 'plyr/dist/plyr.css'
 
 import { fetchFromApi } from '../utils/fetchFromApi'
 import { github, instagram, linkedin, reddit, telegram, twitter, whatsapp } from '../utils/constant'
+import { Helmet } from 'react-helmet'
+import ReactPlayer from 'react-player'
 
 const VideoDetail = ({ response }) => {
   const [video, setVideo] = useState(null)
   const [popular, setPopular] = useState([]);
 
   const { animeId } = useParams();
-  console.log(response)
+  // console.log(response)
 
 
   useEffect(() => {
     fetchFromApi(`vidcdn/watch/${animeId}`)
       .then((data) => setVideo(data))
 
-    fetchFromApi(`popular`)
-      .then((data) => setPopular(data));
+      fetchFromApi(`popular`)
+      .then((data) => setPopular(data))
   }, [animeId])
 
-  const videoURL = video?.Referer;
+  const videoURL = video?.sources?.[0]?.file;
+  if (!videoURL) return "Loading..."
+  // console.log(videoURL)
+
+
+
+
+
 
   return (
     <Box minHeight="95vh" >
+      <Helmet>
+        <title>{`Watch ${animeId} English Sub/Dub online Free on Shivaflix.tk`}</title>
+        <meta name="description" content={`Best site to watch ${animeId} English Sub/Dub online Free and download ${animeId} English Sub/Dub anime.`} />
+        <meta property="og:type" content="website" />
+        <meta name="keywords" content={`${animeId} English Sub/Dub, free ${animeId} online, watch ${animeId} online, watch ${animeId} free, download ${animeId} anime, download ${animeId} free`} />
+        <meta property="og:url" content={`https://shivaflix.tk/watch/${animeId}`} />
+        <meta property="og:description" content={`Best site to watch ${animeId} English Sub/Dub online Free and download ${animeId} English Sub/Dub anime.`} />
+        <meta property="og:title" content={`Watch ${animeId} English Sub/Dub online Free on Shivaflix.tk`} />
+      </Helmet>
       <Stack direction={{ xs: 'column', md: 'row' }}>
         <Box flex={1}>
-          <Box sx={{ width: '100%', position: 'sticky', top: '86px' }}>
+          <Box sx={{ width: '100%' }}>
             <center>
-              <div id="loader1" className='container1'>
-                <iframe id="ifr" allow="fullscreen" src={videoURL ? videoURL : null} width="1024" style={{ maxwidth: "100%", maxheight: "100%", border: "none" }} height="650" ></iframe>
+              <div id="loader1" className='player-wrapper'>
+                <ReactPlayer className="player" width="100%"  height="auto" controls={true} autoplay={false} url={videoURL ? videoURL : null}/>
               </div>
-            </center>
+              </center>
           </Box>
 
+
+          
           <Box px={2} py={{ md: 1, xs: 5 }} justifyContent="center" alignItems="center" className='mobileVideoPage'>
             <Box display="flex" p="2">
               <Box sx={{ mr: { md: "450px", sm: "210px", xs: "18px" } }} />
@@ -51,7 +73,7 @@ const VideoDetail = ({ response }) => {
               </Box>
             </div>
           </Box>
-          
+
         </Box>
 
       </Stack>

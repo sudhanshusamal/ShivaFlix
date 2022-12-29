@@ -1,21 +1,24 @@
-#loader1 {
-  background: url("../public/images/loading.gif") center center no-repeat;
-  max-width: 100%;
-  width: 1024;
-  height: 576;
-  border: none;
+
+.player-wrapper {
+  position: sticky;
+  padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
+  
+}
+.player {
+  position: absolute;
+  top: 0;
+  left: 0;
+  
 }
 
-#loader1.active {
-  display: none;
-
-}
-
-@media (min-width:961px) {
-  .mobileVideoPage {
-    visibility: hidden;
+@media (min-width: 961px) {
+  .player-wrapper{
+    width: 1220px;
   }
 }
+
+
+
 
 .footer {
   background-color: rgba(0, 0, 0, 0.338);
