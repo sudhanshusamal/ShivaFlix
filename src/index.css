@@ -1,24 +1,72 @@
-
 .player-wrapper {
   position: sticky;
-  padding-top: 56.25%; /* 720 / 1280 = 0.5625 */
-  
+  padding-top: 56.25%;
+  /* 720 / 1280 = 0.5625 */
+
 }
+.popularwatch {
+  display: inline;
+}
+
 .player {
   position: absolute;
   top: 0;
   left: 0;
-  
+
 }
 
-@media (min-width: 961px) {
-  .player-wrapper{
-    width: 1220px;
+@media (max-width: 1060px) {
+  .cardNoEp {
+    margin-bottom: 20rem;
+  }
+  .comment {
+    position: absolute;
+    bottom: 15rem;
+    margin-top: 12rem;
+    margin-bottom: 20rem;
+  }
+  .popularwatch {
+    margin-top: 10rem;
   }
 }
 
+@media (min-width: 1281px) {
+  .player-wrapper {
+    width: 1080px;
+    position: relative;
+    right: 12rem;
+    display: inline-block;
+  }
+
+  .cardNoEp {
+    position: relative;
+    left: 34rem;
+    bottom: 40rem;
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+  }
+}
+
+.videoCardAll {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.comment {
+  position:relative;
+  bottom: 32rem;
+  /* width: 800px; */
+  /* right: 20rem; */
+}
 
 
+.epListOnVideo {
+  position: relative;
+  bottom: 18rem;
+  margin-bottom: 10rem;
+}
 
 .footer {
   background-color: rgba(0, 0, 0, 0.338);
@@ -31,24 +79,24 @@
 }
 
 
-   iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    overflow-y: scroll;
-  }
+iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
 
 
 
-  .container1 {
-    padding-bottom: 56.25%;
-    position: relative;
-    display: block;
-    width: 100%;
-    
-  }
+.container1 {
+  padding-bottom: 56.25%;
+  position: relative;
+  display: block;
+  width: 100%;
+
+}
 
 
 
@@ -60,9 +108,9 @@
   font-size: 16px;
   -webkit-transform: translate(0);
   transform: translate(0);
-  background-image: linear-gradient(45deg, #4568dc, #b06ab3);
-  padding: 0.7em 2em;
-  border-radius: 65px;
+  /* background-image: linear-gradient(45deg, #4568dc, #b06ab3); */
+  padding: 0.8em 1em;
+  border-radius: 10px;
   box-shadow: 1px 1px 10px rgba(255, 255, 255, 0.438);
   -webkit-transition: box-shadow 0.25s;
   transition: box-shadow 0.25s;
@@ -80,7 +128,7 @@
 
 .bn30:after {
   content: "";
-  border-radius: 18px;
+  border-radius: 5px;
   position: absolute;
   margin: 4px;
   top: 0;
@@ -92,7 +140,7 @@
 }
 
 .bn30:hover {
-  background-image: linear-gradient(-45deg, #4568dc, #b06ab3);
+  background-image: linear-gradient(-45deg, #bc1d1d, rgba(0, 0, 0, 0.708));
   box-shadow: 0 12px 24px rgba(128, 128, 128, 0.1);
 }
 
@@ -115,6 +163,20 @@ hr {
   position: relative;
   right: 2.8rem;
 }
+
+.statuscard1 {
+  position: relative;
+  right: 2.8rem;
+}
+
+@media (min-width: 1281px) {
+  .card1 {
+    position: relative;
+    bottom: 10rem;
+    margin-bottom: 0;
+  }
+}
+
 
 .status {
   position: relative;
@@ -162,7 +224,8 @@ hr {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
-  width: auto;
+  width: 80px;
+  height: 50px;
   word-break: keep-all;
   z-index: 0;
 }
@@ -175,11 +238,11 @@ hr {
 
 .button-78:before,
 .button-78:after {
-  border-radius: 80px;
+  border-radius: 5px;
 }
 
 .button-78:before {
-  background-image: linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  background-image: linear-gradient(92.83deg, #FC1503 0, #FC1503 10%);
   content: "";
   display: block;
   height: 100%;
@@ -193,7 +256,7 @@ hr {
 
 .button-78:after {
   background-color: initial;
-  background-image: linear-gradient(#541a0f 0, #0c0d0d 100%);
+  background-image: linear-gradient(#252525f2 0, #252525f2 80%);
   bottom: 4px;
   content: "";
   display: block;
@@ -207,7 +270,7 @@ hr {
 }
 
 .button-78:hover:not(:disabled):before {
-  background: linear-gradient(92.83deg, rgb(255, 116, 38) 0%, rgb(249, 58, 19) 100%);
+  background: linear-gradient(92.83deg, #bc1d1d 0%, #2525259a 100%);
 }
 
 .button-78:hover:not(:disabled):after {
@@ -224,7 +287,7 @@ hr {
 }
 
 .button-78:active:not(:disabled):before {
-  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #ff7426 0, #f93a13 100%);
+  background-image: linear-gradient(0deg, rgba(0, 0, 0, .2), rgba(0, 0, 0, .2)), linear-gradient(92.83deg, #bc1d1d 0, rgba(0, 0, 0, 0.316) 100%);
 }
 
 .button-78:active:not(:disabled):after {
@@ -313,11 +376,6 @@ a {
 }
 
 
-@media screen and (max-width:800px) {
-  .copyright {
-    display: none !important;
-  }
-}
 
 @media screen and (max-width: 600px) {
   .scroll-horizontal {

@@ -10,5 +10,4 @@ export { default as AnimeDetail } from './AnimeDetail';
 export { default as VideoDetail } from './VideoDetail';
 export { default as DetailCard } from './DetailCard';
 export { default as Footer } from './Footer';
-
-
+export { default as EpisodeList } from './EpisodeList';

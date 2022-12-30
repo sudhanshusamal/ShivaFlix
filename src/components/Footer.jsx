@@ -9,8 +9,8 @@ const Footer = () => {
             <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', color: '#fff' }}>
                 <center>
                     <CardMedia className='follow'
-                        sx={{ borderRadius: 4, height: '100px', width: { xs: "330px", md: '580px' }, mt: "25px", ml: "25px", border: '1px solid #e3e3e3' }}  >
-                        <Typography variant="h6" sx={{ mt: "10px", fontSize: '18px', textAlign: "center", fontWeight: 500, color: 'white' }}> <span style={{ color: '#F31503' }}>Follow Me </span> On :</Typography>
+                        sx={{ borderRadius: 4, height: '100px', width: { xs: "330px", md: '580px' }, mt: "25px", ml: "2px", border: '1px solid #e3e3e3' }}  >
+                        <Typography variant="h6" sx={{ mt: "10px", fontSize: '18px', textAlign: "center", fontWeight: 500, color: 'white' }}> <span style={{ color: '#F31503' }}>Contact </span>:</Typography>
                         <a href="https://instagram.com/rahul.json">{instagram}</a>
                         <a href="https://twitter.com/sudhanshusama1">{twitter}</a>
                         <a href="https://www.linkedin.com/in/sudhanshu-samal-257549226">{linkedin}</a>

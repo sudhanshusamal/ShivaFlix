@@ -7,15 +7,19 @@ const Videos = ({ videos, width }) => {
 
 
     return (
+       
         <Stack direction="row" flexWrap="wrap" justifyContent="start" gap={2}>
-            {videos.map((item, idx) => (
-                <Box key={idx}>
-                    <center>
+            
+                {videos.map((item, idx) => (
+                    <Box key={idx}>
+                    <div className='videoCardAll'>
                         {item.animeId && <VideoCard video={item} animeId={item.animeId} width={width || "163.61px"} />}
-                    </center>
-                </Box>
-            ))}
+</div>
+                    </Box>
+                ))}
+          
         </Stack>
+        
     )
 }
 

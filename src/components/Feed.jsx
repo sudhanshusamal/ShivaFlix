@@ -51,8 +51,10 @@ const Feed = () => {
           <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: 'white' }}>
             {selectedCategory} <span style={{ color: '#F31503' }}>Anime</span>
           </Typography>
-
+          <Box display="flex" p="2">
+          <Box sx={{ mr: { sm: "85px", xs: "17px" } }} />
           {selectedCategory === "New" ? <Videos videos={reacentVideos} /> : selectedCategory === "Most Popular" ? <Videos videos={popularVideos} /> : selectedCategory === "Movies" ? <Videos videos={animeMovies} /> : selectedCategory === "Dub" ? <Videos videos={dubVideos} /> : selectedCategory === "Kids" ? <Videos videos={kidsVideos} /> : null}
+          </Box>
         </Box>
 
       </Stack>
