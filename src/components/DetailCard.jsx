@@ -19,10 +19,12 @@ const DetailCard = ({ animeDetail, marginTop }) => {
     >
         <CardContent sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', textAlign: 'center', color: '#fff' }}>
             <CardMedia
+            className='animeDetailImg'
                 image={animeDetail?.animeImg}
                 alt={animeDetail?.animeTitle}
                 sx={{ borderRadius: 4, height: '300px', width: '180px', mb: 4, border: '1px solid #e3e3e3' }}
             />
+            <div className='animeDetailImg'>
             <Typography variant="h6" >
                 {animeDetail?.animeTitle}
 
@@ -32,7 +34,9 @@ const DetailCard = ({ animeDetail, marginTop }) => {
                     ( {animeDetail?.otherNames} )
                 </Typography>
             )}
+            </div>
         </CardContent>
+        <div className='animeDetailImg'>
         <CardContent className='statuscard' sx={{ display: 'flex',mr: "-13px", flexDirection: 'column', justifyContent: 'center', color: '#fff' }}>
             {animeDetail?.status && (
                 <Typography className='status' sx={{ fontSize: '13px', fontWeight: 500, color: 'white' }}>
@@ -64,6 +68,7 @@ const DetailCard = ({ animeDetail, marginTop }) => {
                     <span style={{ color: '#F31503' }}> Quality: </span> HD
                 </Typography>
         </CardContent>
+        </div>
     </Box>
     )
 };

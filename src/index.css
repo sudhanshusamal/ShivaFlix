@@ -1,9 +1,55 @@
+.backgroundImgForDetails {
+  filter: blur(7px);
+  
+}
+
+.animeDetailImg{
+  position: relative;
+  bottom: 10rem;
+}
+
+
+.page-link{
+  color: #f1f1f1;
+  background: linear-gradient(#3C373D,#21262A);
+  /* font-size: 20px; */
+  font-weight: 300;
+  line-height: 41px;
+  height: 42px;
+  width: 42px;
+  padding: 0;
+  margin: 0 1px;
+  border: none;
+  position: relative;
+  z-index: 1;
+  transition: all 0.3s ease 0s;
+}
+
+.page-link:hover,.page-link:focus,.active .page-link:hover,.active .page-link{
+  color: #fff;
+  background: linear-gradient(#ff0000,#BC1F00);
+}
+
+
+@media only screen and (max-width: 480px){
+  .pagination{
+      font-size: 0;
+      display: inline-block;
+  }
+  .pagination .page-item{
+      display: inline-block;
+      vertical-align: top;
+      margin: 0 0 20px;
+  }
+}
+
 .player-wrapper {
   position: sticky;
   padding-top: 56.25%;
   /* 720 / 1280 = 0.5625 */
 
 }
+
 .popularwatch {
   display: inline;
 }
@@ -11,41 +57,48 @@
 .player {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 190px;
 
 }
 
-@media (max-width: 1060px) {
-  .cardNoEp {
-    margin-bottom: 20rem;
-  }
-  .comment {
+.videoImg2 {
+  position: relative;
+  right: 20rem;
+  top: 5rem;
+}
+
+.videoTitle {
+  position: absolute;
+  left: 18rem;
+  top: 8rem;
+}
+
+
+.cardNoEp {
+  margin-bottom: 20rem;
+}
+
+.comment {
+  position: relative;
+  top: -32rem;
+  bottom: 0rem;
+  /* margin-top: 12rem; */
+  margin-bottom: 20rem;
+}
+
+.popularwatch {
+  margin-top: 10rem;
+}
+
+
+@media only screen  and (min-width : 1224px) {
+  .player {
     position: absolute;
-    bottom: 15rem;
-    margin-top: 12rem;
-    margin-bottom: 20rem;
-  }
-  .popularwatch {
-    margin-top: 10rem;
-  }
-}
+    left: -0.0rem;
 
-@media (min-width: 1281px) {
-  .player-wrapper {
-    width: 1080px;
-    position: relative;
-    right: 12rem;
-    display: inline-block;
   }
-
-  .cardNoEp {
-    position: relative;
-    left: 34rem;
-    bottom: 40rem;
-    margin: 0;
-    padding: 0;
-    display: inline-block;
-  }
+  
+  
 }
 
 .videoCardAll {
@@ -55,17 +108,28 @@
 }
 
 .comment {
-  position:relative;
-  bottom: 32rem;
+  position: relative;
+  top: -32rem;
+  bottom: 0rem;
   /* width: 800px; */
   /* right: 20rem; */
 }
 
+.status2 {
+  position: relative;
+  left: -0rem;
+}
+
+/* .status3{
+  position:absolute;
+  left: 27.5rem;
+} */
 
 .epListOnVideo {
   position: relative;
   bottom: 18rem;
-  margin-bottom: 10rem;
+  margin-bottom: -23rem;
+  /* margin-bottom: 10rem; */
 }
 
 .footer {
@@ -78,7 +142,204 @@
   color: #b41d1d;
 }
 
+@media (max-width: 720px) {
+  .fullCard {
+    justify-content: center;
+    align-items: center;
 
+  }
+
+  .epListOnVideo {
+    padding-bottom: 10rem;
+    position: relative;
+    top: -251px;
+  }
+
+  .comment {
+    position: relative;
+    top: -32rem;
+    bottom: 0rem;
+    padding-bottom: 0.1rem;
+  }
+
+  .player {
+    position: absolute;
+    left: -0.0rem;
+
+  }
+
+  .videoImg2 {
+    position: absolute;
+    top: 17rem;
+    left: 9rem;
+  }
+
+  .videoTitle {
+    position: relative;
+    top: 6rem;
+    left: -0rem;
+  }
+
+  .statuscard1 {
+    position: relative;
+    top: 4rem;
+    margin-top: 15rem;
+  }
+
+  .status2 {
+    position: relative;
+    left: -1rem;
+    top: 0rem;
+  }
+}
+
+@media screen and (min-width: 540px) and (max-width: 720px) {
+  .videoImg2 {
+    position: relative;
+    top: 2rem;
+    left: 0rem;
+  }
+
+  .videoTitle {
+    position: relative;
+    top: -0rem;
+    left: 0rem;
+  }
+
+  .statuscard1 {
+    position: relative;
+    top: -3rem;
+    margin-top: 15rem;
+  }
+
+  .status2 {
+    position: relative;
+    left: -1rem;
+  }
+  .epListOnVideo {
+    padding-bottom: 10rem;
+    position: relative;
+    top: -301px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 740px) {
+  .player {
+    position: absolute;
+    left: -0.0rem;
+
+  }
+
+  .videoImg2 {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+  }
+
+  
+  .videoTitle {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+  }
+
+  .statuscard1 {
+    position: relative;
+    top: -1rem;
+    margin-top: 15rem;
+  }
+
+  .status2 {
+    position: relative;
+    left: -1rem;
+  }
+
+  .epListOnVideo {
+    padding-bottom: 10rem;
+    position: relative;
+    top: -251px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .fullCard {
+    justify-content: center;
+    align-items: center;
+width: 300px;
+  }
+  .player {
+    position: absolute;
+    left: -0.0rem;
+
+  }
+  
+  .epListOnVideo {
+    padding-bottom: 10rem;
+    position: relative;
+    top: -251px;
+  }
+  .videoImg2 {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+  }
+
+  .videoTitle {
+    position: relative;
+    top: 0rem;
+    left: 0rem;
+  }
+
+  .statuscard1 {
+    position: relative;
+    top: -1rem;
+    margin-top: 15rem;
+  }
+
+  .status2 {
+    position: relative;
+    left: -1rem;
+  }
+  }
+
+  @media screen and (min-width: 1024px) and (max-width: 1600px)  {
+    .player {
+      position: absolute;
+      left: -0.0rem;
+  
+    }
+    
+    .epListOnVideo {
+      padding-bottom: 10rem;
+      position: relative;
+      top: -251px;
+    }
+    .videoImg2 {
+      position: relative;
+      top: 0rem;
+      left: 0rem;
+    }
+  
+    .videoTitle {
+      position: relative;
+      top: 0rem;
+      left: 0rem;
+    }
+  
+    .statuscard1 {
+      position: relative;
+      top: -1rem;
+      margin-top: 15rem;
+    }
+  
+    .status2 {
+      position: relative;
+      left: -1rem;
+    }
+  }
+
+  
 iframe {
   position: absolute;
   top: 0;
@@ -151,7 +412,7 @@ iframe {
 hr {
   visibility: visible;
   margin: 0 auto;
-  margin-top: 100px;
+  margin-top: 10px;
   width: 35%;
   border: 0;
   height: 1px;
@@ -165,6 +426,7 @@ hr {
 }
 
 .statuscard1 {
+  margin-top: 3rem;
   position: relative;
   right: 2.8rem;
 }
@@ -209,7 +471,7 @@ hr {
   flex-direction: row;
   flex-shrink: 0;
   font-family: Eina01, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 800;
   justify-content: center;
   outline: none;
@@ -224,8 +486,8 @@ hr {
   -webkit-user-select: none;
   touch-action: manipulation;
   vertical-align: middle;
-  width: 80px;
-  height: 50px;
+  width: 90px;
+  height: 55px;
   word-break: keep-all;
   z-index: 0;
 }

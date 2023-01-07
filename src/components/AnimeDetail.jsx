@@ -14,28 +14,23 @@ const AnimeDetail = () => {
 
   const [animeDetails, setAnimeDetails] = useState("");
   const [popular, setPopular] = useState([]);
-  const [visible, setVisible] = useState(12);
 
 
   const { animeId } = useParams();
   const episodesList = animeDetails?.episodesList;
   const animeTitleForHead = animeDetails?.animeTitle
-
-  // const showMoreItems = () => {
-  //   setVisible((prevValue) => prevValue + 12)
-  // }
-
-  // const showLessItems = () => {
-  //   setVisible((prevValue) => prevValue - 12)
-  // }
+const randomNo = Math.floor(Math.random(5) * 100)
 
   useEffect(() => {
+
+    window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
 
     fetchFromApi(`anime-details/${animeId}`)
       .then((data) => setAnimeDetails(data))
 
-    fetchFromApi(`recent-release`)
+    fetchFromApi(`popular?page=${randomNo}`)
       .then((data) => setPopular(data));
+
 
   }, [animeId])
 
@@ -56,7 +51,7 @@ const AnimeDetail = () => {
           <meta property="og:title" content={`Watch ${animeTitleForHead} English Sub/Dub online Free on Shivaflix.tk`} />
         </Helmet>
         <Box >
-          <div style={{ backgroundImage: `url(${background_image})`, backgroundRepeat: "no-repeat", zIndex: 10, height: "150px", backgroundSize: "cover" }} />
+          <div className="backgroundImgForDetails" style={{ backgroundImage: `url(${animeDetails?.animeImg})`,opacity:"40%", backgroundRepeat: "no-repeat", zIndex: 10, height: "450px", backgroundSize: "cover" }} />
           <DetailCard animeDetail={animeDetails} />
           <hr className="animated fadeInLeft" />
         </Box>
@@ -74,11 +69,12 @@ const AnimeDetail = () => {
               <EpisodeList animeDetails={animeDetails} episodesList={episodesList} animeId={animeId} />
               </div>
             </center>
-            <Typography variant="h6" sx={{ mt: "100px", mb: "30px", fontSize: '20px', textAlign: "center", fontWeight: 500, color: 'white' }}> <span style={{ color: '#F31503' }}>Recently Uploaded </span> That You Should Try: </Typography>
+
+            <Typography variant="h6" sx={{ mt: "100px", mb: "30px", fontSize: '20px', textAlign: "center", fontWeight: 500, color: 'white' }}> <span style={{ color: '#F31503' }}>More Like </span>This: </Typography>
 
             <Box display="flex" p="2">
               <Box sx={{ mr: { sm: "85px", xs: "42px" } }} />
-              <Videos videos={popular.slice(0, 14)} />
+              <Videos videos={popular.slice(0, 20)} />
             </Box>
           </Box>
         </Box>

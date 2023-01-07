@@ -21,8 +21,15 @@ import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import RedditIcon from '@mui/icons-material/Reddit';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import AccessTimeIcon from '@mui/icons-material/AccessTime';
+import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
+import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
 
 export const logo = 'https://i.ibb.co/1R1r7b6/1671608571832.png';
+export const status = <AccessTimeIcon className='status2' sx={{color: 'red', fontSize: "18px"}}/>
+export const calendar = <CalendarMonthIcon className='status2' sx={{color: 'red', fontSize: "18px"}}/>
+export const type = <FormatAlignCenterIcon className='status2 status3' sx={{color: 'red', fontSize: "18px"}}/>
+
 export const background_image = 'https://i.ibb.co/qrHS4Hd/back2.jpg'
 export const share = <ShareIcon sx={{color: 'white', ml: "15px", }}/>
 export const instagram = <InstagramIcon sx={{color: "purple", ml: "15px", mt: "15px"}}/>

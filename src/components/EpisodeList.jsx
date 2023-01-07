@@ -15,7 +15,7 @@ const EpisodeList = ({episodesList, animeDetails, animeId }) => {
         setVisible((prevValue) => prevValue - 12)
       }
       const showAllItems = () => {
-        setVisible((prevValue) => prevValue + totalEpisodes)
+        setVisible(totalEpisodes)
       }
 
   return (

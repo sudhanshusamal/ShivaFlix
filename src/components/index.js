@@ -11,3 +11,4 @@ export { default as VideoDetail } from './VideoDetail';
 export { default as DetailCard } from './DetailCard';
 export { default as Footer } from './Footer';
 export { default as EpisodeList } from './EpisodeList';
+export { default as RelatedVideos } from './RelatedVideos';

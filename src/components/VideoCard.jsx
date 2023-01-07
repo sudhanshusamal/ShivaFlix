@@ -10,16 +10,16 @@ const VideoCard = ({ video: videoId, animeId: animeId, totalepisodes, width }) =
 
     return (
         
-            <Card sx={{ width: { md: "320px", xs: '100%' }, boxShadow: 'none', borderRadius: 3, width: width }}>
+            <Card sx={{ width: { md: "320px", xs: '100%' },border: 'none', boxShadow: 'none', borderRadius: 3, width: width }}>
                 <div className='pickgradient'>
                     <Link to={videoId ? `/anime-details/${animeId}` : demoVideoUrl}>
                         <CardMedia className='videoImg' image={videoId?.animeImg} alt={videoId?.animeTitle} sx={{ width: 170, height: 190 }} />
                     </Link>
                 </div>
-                <CardContent sx={{ backgroundColor: "#b41d1d", height: "106px" }}>
+                <CardContent className='cardColor' sx={{ backgroundColor: "rgba(0,0,0, 0.8)", height: "106px" }}>
                     <Link to={videoId ? `/anime-details/${animeId}` : demoVideoUrl}>
                         <span>
-                            <Typography variant='subtitle1' fontWeight="bold" color="#FFF">
+                            <Typography variant='subtitle1' fontWeight="bold" color="#fff" >
                                 {videoId?.animeTitle.slice(0, 30) || demoVideoTitle.slice(0, 60)}
                                 {videoId?.animeTitle.length > 30 ? <span>...</span> : null}
                             </Typography>
