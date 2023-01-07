@@ -4,10 +4,13 @@ Api used in this Web :- https://rapidapi.com/riimuru/api/gogoanime2 <br>
 
 #Demo
 Live :- https://shivaflix.tk <br>
-ScreenShot :- ![Screenshot (29)](https://user-images.githubusercontent.com/96838974/209569925-efa94297-ab41-4880-a1c0-d2d55978d82e.png)
-![Screenshot (30)](https://user-images.githubusercontent.com/96838974/209569930-309b82d1-daea-4aae-b4c4-f7a93fd7c9ec.png)
-![Screenshot (31)](https://user-images.githubusercontent.com/96838974/209569935-7089f322-05a6-416d-b27d-6492e6870230.png)
-![Screenshot (32)](https://user-images.githubusercontent.com/96838974/209569937-4fbf8ad0-9b77-413c-bc80-48788b77ca89.png)
+ScreenShot :- ![Screenshot (35)](https://user-images.githubusercontent.com/96838974/211144114-bf398c3c-b826-419d-8047-54d708179b76.png)
+![Screenshot (36)](https://user-images.githubusercontent.com/96838974/211144122-d0606e15-9c57-481b-b226-4541742caaf6.png)
+![Screenshot (37)](https://user-images.githubusercontent.com/96838974/211144126-0108c178-8ec5-4861-b637-adfb86c22182.png)
+![Screenshot (38)](https://user-images.githubusercontent.com/96838974/211144131-d7498949-dfc9-415e-8800-9c3a3fb22230.png)
+
+<br>
+<br>
 
 #Setup 
 1. Download the zip and extract it in any path you want. <br>
