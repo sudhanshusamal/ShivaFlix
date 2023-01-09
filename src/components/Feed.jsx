@@ -4,6 +4,7 @@ import { SideBar, Videos } from "./";
 import { fetchFromApi } from "../utils/fetchFromApi";
 import { Helmet } from "react-helmet";
 import ReactPaginate from "react-paginate";
+import { fetchAnotherApi } from "../utils/fetchAnotherApi";
 
 
 const Feed = () => {
@@ -13,12 +14,14 @@ const Feed = () => {
   const [animeMovies, setAnimeMovies] = useState([])
   const [dubVideos, setDubVideos] = useState([])
   const [kidsVideos, setkidsVideos] = useState([])
+  const [topVideos, setTopVideos] = useState([])
   const [currentPage, setCurrentPage] = useState("")
+  const [loading, setLoading] = useState(false)
 
   const handlePageClick = (data) => {
     setCurrentPage(data.selected + 1)
   }
-
+const top = topVideos?.results
 
 
   useEffect(() => {
@@ -39,6 +42,7 @@ const Feed = () => {
 
     fetchFromApi(`anime-movies?page=${currentPage}`)
       .then((data) => setAnimeMovies(data))
+setLoading(true)
   }, [currentPage])
 
   if (selectedCategory === "New") {
@@ -63,6 +67,8 @@ const Feed = () => {
     var nextLabel = ">>"
   }
 
+
+  
   return (
     <>
       <Stack sx={{ flexDirection: { sx: 'column', md: 'row' } }}>

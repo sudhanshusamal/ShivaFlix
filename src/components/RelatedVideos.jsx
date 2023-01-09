@@ -8,7 +8,6 @@ const RelatedVideos = ({ genreList }) => {
     const [genre, setGenre] = useState([])
     const [popular, setPopular] = useState([]);
     const randomNo = Math.floor(Math.random(5) * 100)
-  console.log(randomNo)
 
     useEffect(() => {
     

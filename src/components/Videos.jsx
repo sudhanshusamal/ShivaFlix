@@ -13,7 +13,7 @@ const Videos = ({ videos, width }) => {
                 {videos.map((item, idx) => (
                     <Box key={idx}>
                     <div className='videoCardAll'>
-                        {item.animeId && <VideoCard video={item} animeId={item.animeId} width={width || "163.61px"} />}
+                        {item.animeId && <VideoCard video={item} animeId={item.animeId} width={width || "153.61px"} />}
 </div>
                     </Box>
                 ))}

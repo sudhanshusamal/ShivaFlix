@@ -9,11 +9,14 @@ import { DetailCard } from "./";
 import { background_image, demoVideoUrl, share, instagram, twitter, linkedin, github, whatsapp, reddit, telegram } from "../utils/constant";
 import { Helmet } from "react-helmet";
 import EpisodeList from "./EpisodeList";
+import { fetchAnotherApi } from "../utils/fetchAnotherApi";
 
 const AnimeDetail = () => {
 
   const [animeDetails, setAnimeDetails] = useState("");
   const [popular, setPopular] = useState([]);
+  
+  const [info, setInfo] = useState([])
 
 
   const { animeId } = useParams();
@@ -31,12 +34,10 @@ const randomNo = Math.floor(Math.random(5) * 100)
     fetchFromApi(`popular?page=${randomNo}`)
       .then((data) => setPopular(data));
 
-
+      fetchAnotherApi(`info/${animeId}`)
+      .then((data) => setInfo(data))
   }, [animeId])
 
-  // document.title = `Watch ${animeTitleForHead} English Sub/Dub online Free on Shivaflix.tk`
-
-  
   return (
     <>
 
@@ -52,7 +53,12 @@ const randomNo = Math.floor(Math.random(5) * 100)
         </Helmet>
         <Box >
           <div className="backgroundImgForDetails" style={{ backgroundImage: `url(${animeDetails?.animeImg})`,opacity:"40%", backgroundRepeat: "no-repeat", zIndex: 10, height: "450px", backgroundSize: "cover" }} />
-          <DetailCard animeDetail={animeDetails} />
+          <DetailCard animeDetail={animeDetails} info={info} />
+          {info?.description && (
+                <Typography id="description" className='description' sx={{ fontSize: '13px', fontWeight: 500, color: 'gray' }}>
+                    <span style={{ color: '#F31503' }}> Description: </span> {info?.description}
+                </Typography>
+            )}
           <hr className="animated fadeInLeft" />
         </Box>
 

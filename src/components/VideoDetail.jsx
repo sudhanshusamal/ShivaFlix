@@ -12,12 +12,14 @@ import { Helmet } from 'react-helmet'
 import ReactPlayer from 'react-player'
 import { AirlineSeatReclineNormalTwoTone } from '@mui/icons-material'
 import RelatedVideos from './RelatedVideos'
+import { fetchAnotherApi } from '../utils/fetchAnotherApi'
 
 const VideoDetail = () => {
 
   const [video, setVideo] = useState(null)
   const [animeDetails, setAnimeDetails] = useState("");
   const [popular, setPopular] = useState([]);
+  const [download, setDownload] = useState([]);
 
   const { animeId } = useParams();
   var animeDetailId = animeId
@@ -27,8 +29,7 @@ const VideoDetail = () => {
 
 
   const genreList = animeDetails?.genres?.[0];
-
-
+const downloadLink = download?.download
 
   var episodesList = animeDetails?.episodesList
 
@@ -48,13 +49,19 @@ const VideoDetail = () => {
 
     fetchFromApi(`popular`)
       .then((data) => setPopular(data))
+
+      fetchAnotherApi(`watch/${animeId}`)
+      .then((data) => setDownload(data))
+
+      
   }, [animeId])
 
   const videoURL = video?.sources_bk?.[0]?.file;
-  console.log(videoURL)
-  if (!videoURL) return "Loading..."
+  
 
-
+const message = () => {
+  alert("If Link Doesn't Open Try Using Vpn Or Other Network")
+}
 
 
   //Disqus 
@@ -89,12 +96,13 @@ const VideoDetail = () => {
             <center>
               <Card className='fullCard' sx={{ width: { md: "1065px", xs: '85%' },backgroundColor: "black", mb: "700px", boxShadow: 16, borderRadius: 5 }}>
                 <div id="loader1" className='player-wrapper'>
-                  <ReactPlayer className="player" width="100%" height="80%" controls={true} autoPlay={true} url={videoURL ? videoURL : null} />
+                  <ReactPlayer className="player" width="100%" height="100%" controls={true} autoPlay={true} url={videoURL ? videoURL : null} />
                 </div>
 
                 <CardContent className='card1'>
+                <a href={downloadLink}><button onclick={message} class="btn"><i class="fa fa-download"></i>Download</button></a>
                   <div className='cardNoEp'>
-
+                  
                     <CardContent sx={{ color: '#ffffff' }}>
                       <Link to={animeId ? `/anime-details/${animeDetailsId}` : null}>
                         <CardMedia

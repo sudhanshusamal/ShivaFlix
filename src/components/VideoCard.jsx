@@ -7,13 +7,14 @@ import { demoThumbnailUrl, demoVideoUrl, demoVideoTitle, demoChannelUrl, demoCha
 
 const VideoCard = ({ video: videoId, animeId: animeId, totalepisodes, width }) => {
 
+    
 
     return (
         
             <Card sx={{ width: { md: "320px", xs: '100%' },border: 'none', boxShadow: 'none', borderRadius: 3, width: width }}>
                 <div className='pickgradient'>
                     <Link to={videoId ? `/anime-details/${animeId}` : demoVideoUrl}>
-                        <CardMedia className='videoImg' image={videoId?.animeImg} alt={videoId?.animeTitle} sx={{ width: 170, height: 190 }} />
+                        <CardMedia className='videoImg' image={videoId?.animeImg} alt={videoId?.animeTitle} sx={{ width: 165, height: 190 }} />
                     </Link>
                 </div>
                 <CardContent className='cardColor' sx={{ backgroundColor: "rgba(0,0,0, 0.8)", height: "106px" }}>

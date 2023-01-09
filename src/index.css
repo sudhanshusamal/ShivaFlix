@@ -3,9 +3,39 @@
   
 }
 
+
+
+.btn {
+  background-color: rgb(255, 30, 30);
+  border: none;
+  color: white;
+  padding: 12px 15px;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+/* Darker background on mouse-over */
+.btn:hover {
+  background-color: rgb(225, 65, 65);
+}
+
+.description {
+  position: relative;
+  top: 0rem;
+  left: 0rem;
+  padding: 2rem 2rem 0;
+  text-align: center;
+padding-bottom: 5rem;
+display: flex;
+flex-direction: column;
+justify-content:center ;
+}
+
 .animeDetailImg{
   position: relative;
   bottom: 10rem;
+  
+  margin-bottom: -8rem;
 }
 
 
@@ -42,6 +72,8 @@
       margin: 0 0 20px;
   }
 }
+
+
 
 .player-wrapper {
   position: sticky;
@@ -97,8 +129,11 @@
     left: -0.0rem;
 
   }
-  
-  
+  .btn{
+  position: absolute;
+  left: 25rem;
+  top: 13rem;
+  }
 }
 
 .videoCardAll {
@@ -149,6 +184,12 @@
 
   }
 
+  .btn{
+    position: relative;
+    left: 6rem;
+    top: -1rem;
+    }
+
   .epListOnVideo {
     padding-bottom: 10rem;
     position: relative;
@@ -165,7 +206,6 @@
   .player {
     position: absolute;
     left: -0.0rem;
-
   }
 
   .videoImg2 {
@@ -199,6 +239,13 @@
     top: 2rem;
     left: 0rem;
   }
+
+  .btn{
+    position: relative;
+    left: 10rem;
+    top: 0rem;
+    margin-bottom: 0;
+    }
 
   .videoTitle {
     position: relative;
@@ -268,6 +315,12 @@
     align-items: center;
 width: 300px;
   }
+
+  .btn{
+    position: relative;
+    left: 15rem;
+    top: 0rem;
+    }
   .player {
     position: absolute;
     left: -0.0rem;
@@ -309,27 +362,33 @@ width: 300px;
       left: -0.0rem;
   
     }
+
+    .btn{
+      position: relative;
+      left: 25rem;
+      top:10rem;
+      }
     
     .epListOnVideo {
       padding-bottom: 10rem;
       position: relative;
-      top: -251px;
+      top: -151px;
     }
     .videoImg2 {
       position: relative;
-      top: 0rem;
+      top: 10rem;
       left: 0rem;
     }
   
     .videoTitle {
       position: relative;
-      top: 0rem;
+      top: 10rem;
       left: 0rem;
     }
   
     .statuscard1 {
       position: relative;
-      top: -1rem;
+      top: 9rem;
       margin-top: 15rem;
     }
   
